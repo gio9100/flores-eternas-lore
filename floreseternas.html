@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flores Eternas Lore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #e91e63;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        section.catalogo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .producto {
+            background-color: white;
+            border-radius: 10px;
+            margin: 10px;
+            width: 280px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .producto:hover {
+            transform: scale(1.05);
+        }
+        .producto img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+        .producto h3 {
+            color: #e91e63;
+            font-size: 1.6em;
+            margin: 10px 0;
+        }
+        .producto p {
+            color: #555;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .producto button {
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+        .producto button:hover {
+            background-color: #c2185b;
+        }
+
+        /* Estilo para el apartado de ver más */
+        .detalle-producto {
+            display: none;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            text-align: left;
+            width: 280px;
+            margin-top: 20px;
+        }
+        .detalle-producto.active {
+            display: block;
+        }
+        .detalle-producto h4 {
+            color: #e91e63;
+        }
+        .detalle-producto form {
+            margin-top: 10px;
+        }
+        .detalle-producto label, .detalle-producto select, .detalle-producto button {
+            margin-top: 10px;
+            display: block;
+            width: 100%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Flores Eternas Lore</h1>
+        <p>Rosas Eternas de Alta Calidad, para toda ocasión</p>
+    </header>
+
+    <section class="catalogo">
+        <!-- Producto 1 -->
+        <div class="producto" id="producto1">
+            <img src="C:\Users\USUARIO\Downloads\rosas eternas.jpg" alt="Rosa Eterna 1">
+            <h3>Rosa Eterna Roja</h3>
+            <p>$25.00</p>
+            <button onclick="verMas('producto1')">Ver más</button>
+            <div class="detalle-producto" id="detalle1">
+                <h4>Detalles del Producto:</h4>
+                <p>La rosa eterna roja es perfecta para cualquier ocasión especial. Esta rosa ha sido preservada para durar toda la vida.</p>
+                <form action="https://wa.me/1234567890?text=Hola%2C%20me%20interesa%20el%20producto%20Rosa%20Eterna%20Roja.%20Quisiera%20hacer%20un%20pedido." method="get" target="_blank">
+                    <label for="cantidad">Cantidad:</label>
+                    <select id="cantidad" name="cantidad">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="custom">Más</option>
+                    </select>
+                    <label for="mensaje">Mensaje (opcional):</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe un mensaje para tu pedido..."></textarea>
+                    <button type="submit">Enviar por WhatsApp</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="producto" id="producto2">
+            <img src="C:\Users\USUARIO\Downloads\rosas eternas.jpg" alt="Rosa Eterna 2">
+            <h3>Rosa Eterna Rosa</h3>
+            <p>$30.00</p>
+            <button onclick="verMas('producto2')">Ver más</button>
+            <div class="detalle-producto" id="detalle2">
+                <h4>Detalles del Producto:</h4>
+                <p>La rosa eterna rosa es un símbolo de amor eterno, perfecta para cualquier celebración especial.</p>
+                <form action="https://wa.me/1234567890?text=Hola%2C%20me%20interesa%20el%20producto%20Rosa%20Eterna%20Rosa.%20Quisiera%20hacer%20un%20pedido." method="get" target="_blank">
+                    <label for="cantidad">Cantidad:</label>
+                    <select id="cantidad" name="cantidad">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="custom">Más</option>
+                    </select>
+                    <label for="mensaje">Mensaje (opcional):</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe un mensaje para tu pedido..."></textarea>
+                    <button type="submit">Enviar por WhatsApp</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="producto" id="producto3">
+            <img src="C:\Users\USUARIO\Downloads\rosas eternas.jpg" alt="Rosa Eterna 3">
+            <h3>Rosa Eterna Blanca</h3>
+            <p>$28.00</p>
+            <button onclick="verMas('producto3')">Ver más</button>
+            <div class="detalle-producto" id="detalle3">
+                <h4>Detalles del Producto:</h4>
+                <p>La rosa eterna blanca es la elección perfecta para ocasiones formales y elegantes.</p>
+                <form action="https://wa.me/3514061039?text=Hola%2C%20me%20interesa%20el%20producto%20Rosa%20Eterna%20Blanca.%20Quisiera%20hacer%20un%20pedido." method="get" target="_blank">
+                    <label for="cantidad">Cantidad:</label>
+                    <select id="cantidad" name="cantidad">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="custom">Más</option>
+                    </select>
+                    <label for="mensaje">Mensaje (opcional):</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe un mensaje para tu pedido..."></textarea>
+                    <button type="submit">Enviar por WhatsApp</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        function verMas(producto) {
+            const detalle = document.getElementById(`detalle${producto.charAt(producto.length-1)}`);
+            detalle.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
